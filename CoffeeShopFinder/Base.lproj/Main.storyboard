@@ -15,8 +15,51 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jee-81-NSx">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="405"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="405" id="aek-Fi-wU0"/>
+                                </constraints>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nearest Coffee Bar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fyf-PU-zbF">
+                                <rect key="frame" x="227" y="425" width="146" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="146" id="EVe-1X-hNZ"/>
+                                    <constraint firstAttribute="height" constant="21" id="fnf-yt-h5h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mg-WL-jxA">
+                                <rect key="frame" x="192" y="470" width="216" height="89"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="89" id="XRE-tr-Wok"/>
+                                    <constraint firstAttribute="width" constant="216" id="jdG-7h-gXs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Fyf-PU-zbF" firstAttribute="top" secondItem="jee-81-NSx" secondAttribute="bottom" constant="20" id="8gP-Sz-YDU"/>
+                            <constraint firstItem="8mg-WL-jxA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HJy-23-OhR"/>
+                            <constraint firstItem="jee-81-NSx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="HiD-eL-4ea"/>
+                            <constraint firstItem="Fyf-PU-zbF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pal-g1-4bG"/>
+                            <constraint firstItem="8mg-WL-jxA" firstAttribute="top" secondItem="Fyf-PU-zbF" secondAttribute="bottom" constant="24" id="QWE-Ho-eOd"/>
+                            <constraint firstAttribute="trailing" secondItem="jee-81-NSx" secondAttribute="trailing" id="RgA-V1-lkm"/>
+                            <constraint firstItem="jee-81-NSx" firstAttribute="centerX" secondItem="8mg-WL-jxA" secondAttribute="centerX" id="TWB-43-hG2"/>
+                            <constraint firstItem="jee-81-NSx" firstAttribute="centerX" secondItem="Fyf-PU-zbF" secondAttribute="centerX" id="fxl-e3-ebr"/>
+                            <constraint firstItem="Fyf-PU-zbF" firstAttribute="top" secondItem="jee-81-NSx" secondAttribute="bottom" constant="20" id="gGe-Mf-oiI"/>
+                            <constraint firstItem="jee-81-NSx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="oOg-Cj-Nwf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="map" destination="jee-81-NSx" id="d7F-L5-hb2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
